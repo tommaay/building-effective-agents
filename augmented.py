@@ -107,7 +107,7 @@ messages = [{"role": "user", "content": "What's the weather like in Da Nang, Vie
 
 # Get completion from OpenAI
 completion = client.chat.completions.create(
-    model="gpt-4o",
+    model="gpt-4o-mini",
     messages=messages,
     tools=tools
 )
@@ -131,7 +131,7 @@ if completion.choices[0].message.tool_calls:
     
     # Get final response from OpenAI
     final_response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=messages,
         tools=tools
     )
